@@ -18,6 +18,6 @@ pull_email:
   keep_unseen_count: 50
 
 filters:
-  - subject_contains: "urgent"
+  - sender_email_contains: ["@email.com"]
     action: "forward"
     forward_to: "forward_to@example.com"
