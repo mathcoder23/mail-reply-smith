@@ -1,0 +1,4 @@
+services:
+  mail-reply-smith:
+    restart: always
+    image: mail-reply-smith

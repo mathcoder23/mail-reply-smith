@@ -1,0 +1,23 @@
+transport_config:
+  imap:
+    host: "imap.example.com"
+    port: 993
+    user: "your_email@example.com"
+    password: "your_password"
+    is_fix_163provider_issue: true
+  smtp:
+    host: "smtp.example.com"
+    port: 25
+    user: "your_email@example.com"
+    password: "your_password"
+
+pull_email:
+  fetch_interval_seconds: 30
+  transport: imap
+  select_folder: INBOX
+  keep_unseen_count: 50
+
+filters:
+  - subject_contains: "urgent"
+    action: "forward"
+    forward_to: "forward_to@example.com"
